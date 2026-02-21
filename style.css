@@ -1,0 +1,126 @@
+:root {
+    --neon-cyan: #00f3ff;
+    --neon-pink: #ff00ff;
+    --bg-dark: #050505;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-dark);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle, #1a0033 0%, #050505 100%);
+}
+
+.glow-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+    margin-bottom: 10px;
+}
+
+.admin-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid var(--neon-pink);
+    border-radius: 20px;
+    color: var(--neon-pink);
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.container { padding: 20px; max-width: 600px; margin: auto; }
+
+h2 {
+    color: var(--neon-pink);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    margin: 40px 0 20px;
+}
+
+/* EFEK 3D CARD */
+.service-container {
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.game-card:hover {
+    transform: rotateX(10deg) rotateY(-5deg) translateZ(10px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+.card-inner h3 {
+    margin: 0;
+    color: var(--neon-pink);
+    transform: translateZ(30px); /* Teks menonjol ke depan */
+}
+
+.price { color: var(--neon-cyan); font-weight: bold; transform: translateZ(20px); }
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* FORM & TABLE */
+.price-table { overflow-x: auto; background: #111; border-radius: 10px; border: 1px solid #222; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #222; }
+th { color: var(--neon-cyan); }
+
+.order-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--neon-pink);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+}
+
+input, select {
+    padding: 14px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 8px;
+}
+
+.btn-glow {
+    background: var(--neon-pink);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--neon-pink);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-glow:hover { transform: scale(1.05); filter: brightness(1.2); }
+
+#particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
