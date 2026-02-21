@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guztyy Games | Jasa Joki 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
 
+    <header>
+        <h1 class="glow-text">GUZTYY GAMES</h1>
+        <div class="admin-badge">Admin: Guztyy</div>
+    </header>
+
+    <div class="container">
+        <section id="services">
+            <h2><span class="emoji">🎮</span> PILIHAN GAME & ESTIMASI</h2>
+            <div class="service-container">
+                
+                <div class="game-card">
+                    <div class="card-inner">
+                        <h3>MOBILE LEGENDS</h3>
+                        <p class="price">Rp 2.000 - 15.000 / Bintang</p>
+                        <p class="time">⏱️ Estimasi: 1-2 Hari</p>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="card-inner">
+                        <h3>FREE FIRE</h3>
+                        <p class="price">Mulai Rp 5.000 / Rank</p>
+                        <p class="time">⏱️ Estimasi: 24 Jam Selesai</p>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="card-inner">
+                        <h3>PUBG MOBILE</h3>
+                        <p class="price">Mulai Rp 10.000 / Tier</p>
+                        <p class="time">⏱️ Estimasi: 2-3 Hari</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="prices">
+            <h2><span class="emoji">📊</span> PRICE LIST DETAIL</h2>
+            <div class="price-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kategori</th>
+                            <th>Harga</th>
+                            <th>Waktu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Rank Bronze-Gold</td><td>Rp 3.000</td><td>3 Jam</td></tr>
+                        <tr><td>Rank Epic-Legend</td><td>Rp 8.000</td><td>1 Hari</td></tr>
+                        <tr><td>Rank Mythic+</td><td>Kontak Admin</td><td>Antre</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="order">
+            <h2><span class="emoji">📝</span> FORM ORDER</h2>
+            <div class="order-box">
+                <input type="text" id="game" placeholder="Nama Game (Contoh: MLBB)">
+                <input type="text" id="id-game" placeholder="ID & Server">
+                <input type="text" id="target" placeholder="Target Rank">
+                <select id="pembayaran">
+                    <option value="DANA">DANA</option>
+                    <option value="OVO/GOPAY">OVO / GoPay</option>
+                    <option value="BANK">Transfer Bank</option>
+                </select>
+                <button onclick="kirimWA()" class="btn-glow">ORDER VIA WHATSAPP</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
